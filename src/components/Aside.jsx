@@ -13,7 +13,11 @@ const Aside = () => {
       <div className="flex h-full">
         <ul className="flex flex-col m-auto p-2 bg-slate-600 items-center justify-center gap-4 rounded-lg">
           <li className="list-none">
-            <a href="#" className="text-3xl text-white no-underline">
+            <a
+              target="_blank"
+              href="https://wa.me/+6282386012290"
+              className="text-3xl text-white no-underline"
+            >
               <FontAwesomeIcon icon={faEnvelope} />
             </a>
           </li>

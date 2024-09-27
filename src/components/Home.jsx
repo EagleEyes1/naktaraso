@@ -4,6 +4,15 @@ import styles from "../assets/css/Home.module.css";
 const Home = () => {
   return (
     <div>
+      <h1 className="mt-20 text-center text-3xl font-semibold">
+        RENDANG INOVATIF INDONESIA
+      </h1>
+      <div className="mt-3 mb-10 text-center font-semibold">
+        <i>
+          Temukan aneka rendang inovatif dengan cita rasa nikmat, bermanfaat dan
+          menggunakan bahan baku berkualitas
+        </i>
+      </div>
       <div className="relative">
         <img
           className="w-screen h-[35rem] opacity-80"
@@ -35,18 +44,49 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="min-h-96">Mengapa Harus Produk NakTaraso</div>
-      <div className="min-h-96">Penghargaan</div>
-      <div className="min-h-96">Sertifikat dan Legalitas</div>
-      <div className="min-h-96">Rumah Produksi</div>
-      <div className="min-h-96">Poin Distribusi</div>
-      <div className="min-h-96">Channel Penjualan</div>
-      <div className="min-h-96">Katalog Produk Indo</div>
-      <div className="min-h-96">Katalog Produk Inggris</div>
-      <div className="min-h-96">Expo dan Kegiatan</div>
-      <div className="min-h-96">Customer Testimoni</div>
-      <div className="min-h-96">Support dan Kolaborasi</div>
-      <div className="min-h-96">Kontak Kami</div>
+      <div className="container relative mx-auto py-28 px-32 grid grid-cols-2">
+        <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[26rem] h-[26rem] bg-amber-800 opacity-50 rounded-full"></div>
+        <div className="self-center z-10">
+          <h1 className="pb-3 font-bold text-3xl">RENDANG FOR KIDS</h1>
+          <i className="text-lg">
+            ‘Rendang yang diolah secara khusus untuk anak anak, tidak pedas,
+            tekstur gampang dikunyah anak dan berbahan baku berkualitas. Menjaga
+            asupan protein dan nutrisi anak agar angka kecukupan gizi anak
+            selalu baik’
+          </i>
+        </div>
+        <div className="relative z-10">
+          <img className="w-[32rem]" src={require("../assets/homepict1.png")} />
+        </div>
+      </div>
+
+      <div className="container relative mx-auto px-32 grid grid-cols-2">
+        <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[26rem] h-[26rem] bg-amber-800 opacity-50 rounded-full"></div>
+        <div className="self-center z-10">
+          <h1 className="pb-3 font-bold text-3xl">RENDANG SATSET</h1>
+          <i className="text-lg">
+            Rekomendasi rendang untuk para traveler, haji dan umroh. Memberikan
+            kemudahan karena dikemasan per sachet per satu kali makan. Sangat
+            higienis, praktis dan tidak belepotan’
+          </i>
+        </div>
+        <div className="relative z-10">
+          <img className="w-[32rem]" src={require("../assets/homepict2.png")} />
+        </div>
+      </div>
+
+      <div className="container relative mx-auto px-32 grid grid-cols-2">
+        <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[26rem] h-[26rem] bg-amber-800 opacity-50 rounded-full"></div>
+        <div className="self-center z-10">
+          <h1 className="pb-3 font-bold text-3xl">RENDANG CRACKERs</h1>
+          <i className="text-lg">
+            ‘Sensasi nikmatnya rendang yang dinikmati dalam renyahnya crackers’
+          </i>
+        </div>
+        <div className="relative z-10">
+          <img className="h-[40rem]" src={require("../assets/homepict3.png")} />
+        </div>
+      </div>
     </div>
   );
 };
