@@ -58,47 +58,47 @@ const Navbar = () => {
             <Bars3Icon aria-hidden="true" className="h-6 w-6" />
           </button>
         </div>
-        <PopoverGroup className="hidden lg:flex lg:gap-x-10">
+        <PopoverGroup className="hidden lg:flex lg:text-base lg:text-right xl:text-left lg:pl-20 xl:pl-0 xl:text-lg lg:gap-x-8 xl:gap-x-12">
           <a
             href="/"
-            className="text-lg font-semibold leading-6 text-gray-900 hover:underline"
+            className="font-semibold leading-6 text-gray-900 hover:underline"
           >
             Beranda
           </a>
           <a
             href="/aboutus"
-            className="text-lg font-semibold leading-6 text-gray-900 hover:underline"
+            className="font-semibold leading-6 text-gray-900 hover:underline"
           >
             Tentang Kami
           </a>
           <a
             href="catalogue"
-            className="text-lg font-semibold leading-6 text-gray-900 hover:underline"
+            className="font-semibold leading-6 text-gray-900 hover:underline"
           >
             Katalog Produk
           </a>
 
           <a
-            href="#"
-            className="text-lg font-semibold leading-6 text-gray-900 hover:underline"
+            href="/expo"
+            className="font-semibold leading-6 text-gray-900 hover:underline"
           >
             Expo
           </a>
           <a
             href="#"
-            className="text-lg font-semibold leading-6 text-gray-900 hover:underline"
+            className="font-semibold leading-6 text-gray-900 hover:underline"
           >
             Penghargaan
           </a>
           <a
             href="#"
-            className="text-lg font-semibold leading-6 text-gray-900 hover:underline"
+            className="font-semibold leading-6 text-gray-900 hover:underline"
           >
             Kemitraan
           </a>
           <a
             href="#"
-            className="text-lg font-semibold leading-6 text-gray-900 hover:underline"
+            className="font-semibold leading-6 text-gray-900 hover:underline"
           >
             Kontak Kami
           </a>
@@ -117,7 +117,7 @@ const Navbar = () => {
               <img
                 alt="logo"
                 src={require("../assets/logo.png")}
-                className="h-14 w-auto"
+                className="h-12 w-auto"
               />
             </a>
             <button
