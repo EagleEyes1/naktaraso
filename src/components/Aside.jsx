@@ -15,7 +15,7 @@ const Aside = () => {
           <li className="list-none">
             <a
               target="_blank"
-              href="https://wa.me/+6282386012290"
+              href="https://wa.me/+6281275740024"
               className="text-3xl text-white no-underline"
             >
               <FontAwesomeIcon icon={faEnvelope} />

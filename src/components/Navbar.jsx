@@ -85,19 +85,19 @@ const Navbar = () => {
             Expo
           </a>
           <a
-            href="#"
+            href="/awards"
             className="font-semibold leading-6 text-gray-900 hover:underline"
           >
             Penghargaan
           </a>
           <a
-            href="#"
+            href="/partner"
             className="font-semibold leading-6 text-gray-900 hover:underline"
           >
             Kemitraan
           </a>
           <a
-            href="#"
+            href="contactus"
             className="font-semibold leading-6 text-gray-900 hover:underline"
           >
             Kontak Kami
@@ -135,43 +135,43 @@ const Navbar = () => {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 <a
-                  href="#"
+                  href="/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Beranda
                 </a>
                 <a
-                  href="#"
+                  href="/aboutus"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Tentang Kami
                 </a>
                 <a
-                  href="#"
+                  href="/catalogue"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Katalog Produk
                 </a>
                 <a
-                  href="#"
+                  href="/expo"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Expo
                 </a>
                 <a
-                  href="#"
+                  href="/awards"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Penghargaan
                 </a>
                 <a
-                  href="#"
+                  href="partner"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Kemitraan
                 </a>
                 <a
-                  href="#"
+                  href="contactus"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Kontak Kami
