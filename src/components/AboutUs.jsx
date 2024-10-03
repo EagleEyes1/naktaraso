@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <div className="container mx-auto px-52">
+    <div className="mx-auto px-52 z-10 bg-[#fff8ee]">
       <h1 className="pt-10 text-center text-3xl font-bold">Tentang Kami</h1>
       <div className="pt-6">
         <p className="text-lg leading-8">
@@ -41,7 +41,7 @@ const AboutUs = () => {
         </div>
         <div>
           <img
-            className="w-[50rem] rounded-xl"
+            className="w-[50rem] rounded-xl z-20"
             src={require("../assets/aboutuspict1.jpeg")}
           />
         </div>
@@ -90,6 +90,17 @@ const AboutUs = () => {
             </li>
           </ul>
         </p>
+      </div>
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 top-[calc(100%-13rem)] -z-0 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem) xl:top-[calc(100%-40rem)]"
+      >
+        <div
+          style={{
+            clipPath: "polygon(0% 100%, 32% 57%, 61% 25%, 93% 5%, 87% 18%)",
+          }}
+          className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff0400] to-[#ff9300] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem] xl:left-[calc(50%+6rem)]"
+        />
       </div>
     </div>
   );

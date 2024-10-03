@@ -1,10 +1,21 @@
 import React, { useState, useRef, useEffect } from "react";
 import styles from "../assets/css/Home.module.css";
+import Lottie from "react-lottie";
+import animationData from "../assets/youtube.json";
 
 const Home = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const containerRef = useRef(null);
   const iframeRef = useRef(null);
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
   const handlePlay = () => {
     setIsPlaying(true);
@@ -31,7 +42,7 @@ const Home = () => {
 
   return (
     <div>
-      <div className="bg-[#ffeedc] py-10">
+      <div className="bg-[#ffeedc] py-16">
         <h1 className="pt-14 text-center text-5xl font-bold tracking-wide">
           RENDANG INOVATIF INDONESIA
         </h1>
@@ -45,19 +56,27 @@ const Home = () => {
 
       <div className="bg-[#fff8ee] relative">
         <div
+          aria-hidden="true"
+          className="absolute inset-x-0 top-[calc(100%-13rem)] z-0 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem) xl:top-[calc(100%-90rem)]"
+        >
+          <div
+            style={{
+              clipPath:
+                "polygon(84% 100%, 74% 57%, 54% 36%, 28% 22%, 9% 5%, 2% 1%)",
+            }}
+            className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff0400] to-[#ff9300] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem] xl:left-[calc(50%+6rem)]"
+          />
+        </div>
+        <div
           ref={containerRef}
-          className="absolute left-1/2 z-20 -top-10 transform -translate-x-1/2 flex justify-center items-center text-center"
+          className="absolute left-1/2 z-10 -top-28 transform -translate-x-1/2 flex justify-center items-center text-center"
         >
           {!isPlaying ? (
             <button
               onClick={handlePlay}
               className="play-button text-white rounded-full p-4 hover:opacity-75"
             >
-              <img
-                className="w-16 h-16"
-                src={require("../assets/youtube.png")}
-                alt="YouTube icon"
-              />
+              <Lottie options={defaultOptions} height={180} width={180} />
             </button>
           ) : (
             <iframe
@@ -88,7 +107,7 @@ const Home = () => {
             ></path>
           </svg>
         </div>
-        <div className="container relative mx-auto py-56 px-32 grid grid-cols-2">
+        <div className="container z-10 relative mx-auto py-56 px-32 grid grid-cols-2">
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[26rem] h-[26rem] bg-amber-800 opacity-50 rounded-full"></div>
           <div className="self-center z-10">
             <h1 className="pb-3 font-bold text-3xl">RENDANG FOR KIDS</h1>
@@ -107,7 +126,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="container relative mx-auto px-32 grid grid-cols-2">
+        <div className="container z-10 relative mx-auto px-32 -top-12 grid grid-cols-2">
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[26rem] h-[26rem] bg-amber-800 opacity-50 rounded-full"></div>
           <div className="self-center z-10">
             <h1 className="pb-3 font-bold text-3xl">RENDANG SATSET</h1>
@@ -125,8 +144,8 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="container relative mx-auto py-16 px-32 grid grid-cols-2">
-          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[26rem] h-[26rem] bg-amber-800 opacity-50 rounded-full"></div>
+        <div className="container z-10 relative mx-auto px-32 grid grid-cols-2">
+          <div className="absolute z-10 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[26rem] h-[26rem] bg-amber-800 opacity-50 rounded-full"></div>
           <div className="self-center z-10">
             <h1 className="pb-3 font-bold text-3xl">RENDANG CRACKERs</h1>
             <i className="text-lg">
@@ -134,12 +153,24 @@ const Home = () => {
               crackers’
             </i>
           </div>
-          <div className="relative z-10">
+          <div className="relative z-10 ">
             <img
-              className="h-[40rem]"
+              className="h-[40rem] z-10"
               src={require("../assets/homepict3.png")}
             />
           </div>
+        </div>
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-0 top-[calc(100%-13rem)] z-0 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem) xl:top-[calc(100%-55rem)]"
+        >
+          <div
+            style={{
+              clipPath:
+                "polygon(11% 100%, 11% 56%, 6% 48%, 2% 44%, 0% 46%, 0% 89%)",
+            }}
+            className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff0400] to-[#ff9300] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem] xl:left-[calc(50%+1rem)]"
+          />
         </div>
       </div>
     </div>
