@@ -33,7 +33,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <header className="z-20 sticky top-0 bg-white opacity-100">
+    <header className="z-20 sticky top-0 bg-[#ffeedc] opacity-100 shadow-sm text-[#200000]">
       <nav
         aria-label="Global"
         className="mx-auto flex max-w-[90rem] items-center justify-between p-6 lg:px-8"
