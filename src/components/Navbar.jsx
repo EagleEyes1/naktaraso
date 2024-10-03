@@ -36,14 +36,14 @@ const Navbar = () => {
     <header className="z-20 sticky top-0 bg-[#E8B86D] opacity-100 shadow-sm text-[#200000]">
       <nav
         aria-label="Global"
-        className="mx-auto flex max-w-[90rem] items-center justify-between p-6 lg:px-8"
+        className="mx-auto flex max-w-[90rem] items-center justify-between p-6 lg:px-4"
       >
         <div className="flex">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <img
               alt=""
-              src={require("../assets/logo.png")}
+              src={require("../assets/logo2.png")}
               className="h-12 w-auto sm:h-14 md:h-16 lg:h-24"
             />
           </a>
