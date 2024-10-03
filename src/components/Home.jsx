@@ -1,11 +1,38 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styles from "../assets/css/Home.module.css";
 
 const Home = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const containerRef = useRef(null);
+  const iframeRef = useRef(null);
+
+  const handlePlay = () => {
+    setIsPlaying(true);
+    setTimeout(() => {
+      if (iframeRef.current) {
+        iframeRef.current.requestFullscreen();
+      }
+    }, 100);
+  };
+
+  const handleFullscreenChange = () => {
+    if (!document.fullscreenElement) {
+      setIsPlaying(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+
+    return () => {
+      document.removeEventListener("fullscreenchange", handleFullscreenChange);
+    };
+  }, []);
+
   return (
     <div>
-      <div className="bg-[#ffeedc] pb-20">
-        <h1 className="pt-14 text-center text-3xl font-semibold">
+      <div className="bg-[#ffeedc] py-10">
+        <h1 className="pt-14 text-center text-5xl font-bold tracking-wide">
           RENDANG INOVATIF INDONESIA
         </h1>
         <div className="mt-3 mb-10 text-center font-semibold">
@@ -14,22 +41,40 @@ const Home = () => {
             dan menggunakan bahan baku berkualitas
           </i>
         </div>
-        <div className="mx-auto relative px-52 flex justify-center items-center text-center">
-          <iframe
-            className=" rounded-2xl"
-            width="1000"
-            height="570"
-            src="https://www.youtube.com/embed/Q7KcoNmWyC0?si=A2VJ3QXKGDA_ucfl"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </div>
       </div>
 
       <div className="bg-[#fff8ee] relative">
+        <div
+          ref={containerRef}
+          className="absolute left-1/2 z-20 -top-10 transform -translate-x-1/2 flex justify-center items-center text-center"
+        >
+          {!isPlaying ? (
+            <button
+              onClick={handlePlay}
+              className="play-button text-white rounded-full p-4 hover:opacity-75"
+            >
+              <img
+                className="w-16 h-16"
+                src={require("../assets/youtube.png")}
+                alt="YouTube icon"
+              />
+            </button>
+          ) : (
+            <iframe
+              ref={iframeRef}
+              id="videoIframe"
+              className="rounded-2xl"
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/Q7KcoNmWyC0?si=A2VJ3QXKGDA_ucfl"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          )}
+        </div>
         <div className={styles.wave}>
           <svg
             data-name="Layer 1"
@@ -43,7 +88,7 @@ const Home = () => {
             ></path>
           </svg>
         </div>
-        <div className="container relative mx-auto py-28 px-32 grid grid-cols-2">
+        <div className="container relative mx-auto py-56 px-32 grid grid-cols-2">
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[26rem] h-[26rem] bg-amber-800 opacity-50 rounded-full"></div>
           <div className="self-center z-10">
             <h1 className="pb-3 font-bold text-3xl">RENDANG FOR KIDS</h1>
@@ -80,7 +125,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="container relative mx-auto px-32 grid grid-cols-2">
+        <div className="container relative mx-auto py-16 px-32 grid grid-cols-2">
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[26rem] h-[26rem] bg-amber-800 opacity-50 rounded-full"></div>
           <div className="self-center z-10">
             <h1 className="pb-3 font-bold text-3xl">RENDANG CRACKERs</h1>

@@ -10,9 +10,9 @@ import {
 
 const Aside = () => {
   return (
-    <aside className="fixed bottom-8 right-8">
-      <div className="flex h-full">
-        <ul className="flex flex-col m-auto p-2 bg-[#fc8002] items-center justify-center gap-4 rounded-lg">
+    <aside className="fixed bottom-8 right-8 z-50">
+      <div className="flex h-full z-50">
+        <ul className="flex flex-col m-auto p-2 bg-[#E8B86D] items-center justify-center gap-4 rounded-lg">
           <li className="list-none">
             <a
               target="_blank"
