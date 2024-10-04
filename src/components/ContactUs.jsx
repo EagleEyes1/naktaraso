@@ -39,27 +39,27 @@ const ContactUs = () => {
               Dukuh Zamrud, Blok R No 1, Mustika Jaya, Kota Bekasi, Jawa Barat
             </p>
           </div>
-          <div>
-            <h2>Online Marketplace</h2>
-            <div className="flex gap-x-3">
+          <div className="pt-8">
+            <h2 className="pb-5 font-semibold">Online Marketplace</h2>
+            <div className="flex gap-x-8 pb-5">
               <a
                 href="https://s.shopee.co.id/609CJ7KVyU?share_channel_code=1"
                 target="_blank"
               >
                 <img
-                  className="w-[10rem]"
+                  className="w-20"
                   src={require("../assets/shopee.png")}
                   alt=""
                 />
               </a>
 
               <img
-                className="w-[10rem]"
+                className="w-20"
                 src={require("../assets/tokopedia.png")}
                 alt=""
               />
             </div>
-            <h2>More Information</h2>
+            <h2 className="font-semibold">More Information</h2>
             <div className="grid grid-cols-2">
               <div>
                 <p>WhatsApp</p>
@@ -196,7 +196,7 @@ const ContactUs = () => {
               </div>
               <button
                 type="submit"
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                class="bg-[#ffeedc] hover:bg-[#ffeedc]/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
                 Submit
               </button>
