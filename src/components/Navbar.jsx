@@ -39,7 +39,7 @@ const Navbar = () => {
         className="mx-auto flex max-w-[90rem] items-center justify-between p-6 lg:px-12"
       >
         <div className="flex">
-          <a href="#" className="-m-1.5 p-1.5">
+          <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <img
               alt=""
@@ -112,7 +112,7 @@ const Navbar = () => {
         <div className="fixed inset-0 z-20 backdrop-blur-md" />
         <DialogPanel className="fixed inset-y-0 right-0 z-30 w-full overflow-y-auto bg-[#E8B86D] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <img
                 alt="logo"

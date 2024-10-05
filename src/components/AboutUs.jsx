@@ -4,7 +4,7 @@ import styles from "../assets/css/Home.module.css";
 const AboutUs = () => {
   return (
     <>
-      <div className="mx-auto px-48 z-10  bg-[#ffeedc] py-20">
+      <div className="mx-auto  z-10  bg-[#ffeedc] xl:py-20 lg:py-20 xl:px-48 lg:px-24">
         <div className="py-16 px-20 grid grid-cols-2 bg-[#E8B86D] rounded-2xl shadow-md">
           <div className="self-center">
             <h1 className="text-3xl font-bold pb-8">Tentang Kami</h1>
@@ -24,9 +24,9 @@ const AboutUs = () => {
               di seluruh Indonesia.
             </p>
           </div>
-          <div className="pl-28">
+          <div className="pl-28 lg:self-center">
             <img
-              className="h-full w-full z-20 rounded-xl xl:rounded-xl"
+              className="xl:h-[25rem] z-20 lg:rounded-xl xl:rounded-xl lg:h-[25rem] "
               src={require("../assets/aboutuspict11.jpeg")}
             />
           </div>

@@ -42,7 +42,7 @@ const Home = () => {
 
   return (
     <div>
-      <div className="bg-[#ffeedc] py-16">
+      <div className="bg-[#ffeedc] py-16 px-7 xl:px-5 lg:px-5 md:px-5 sm:px-20">
         <h1 className="pt-14 text-center font-header text-5xl font-bold tracking-wide">
           RENDANG INOVATIF INDONESIA
         </h1>
@@ -57,14 +57,14 @@ const Home = () => {
       <div className="bg-[#fff8ee] relative">
         <div
           aria-hidden="true"
-          className="absolute inset-x-0 top-[calc(100%-13rem)] z-0 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem) xl:top-[calc(100%-90rem)] lg:top-[calc(100%-80rem)]"
+          className="absolute inset-x-0 top-[calc(100%-93rem)] z-0 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem) xl:top-[calc(100%-90rem)] lg:top-[calc(100%-80rem)] md:top-[calc(100%-80rem)] sm:top-[calc(100%-80rem)]"
         >
           <div
             style={{
               clipPath:
                 "polygon(84% 100%, 74% 57%, 54% 36%, 28% 22%, 9% 5%, 2% 1%)",
             }}
-            className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff0400] to-[#ff9300] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem] xl:left-[calc(50%+6rem)] lg:left-[calc(50%+30rem)]"
+            className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff0400] to-[#ff9300] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem] xl:left-[calc(50%+6rem)] lg:left-[calc(50%+30rem)] md:left-[calc(50%+30rem)]"
           />
         </div>
         <div
@@ -107,10 +107,12 @@ const Home = () => {
             ></path>
           </svg>
         </div>
-        <div className="container z-10 relative mx-auto py-56 px-32 grid grid-cols-2 lg:px-10 lg:gap-8">
-          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[26rem] h-[26rem] bg-amber-800 opacity-50 rounded-full"></div>
+        <div className="container z-10 relative mx-auto px-10 pt-48 pb-32 grid xl:grid-cols-2 xl:py-56 xl:px-32 md:px-8 lg:grid-cols-2 lg:py-56 md:py-64 lg:px-10 lg:gap-8 md:grid-cols-2 md:gap-5 sm:pt-48 sm:pb-40 sm:grid-cols-1 sm:gap-y-8 sm:px-8">
+          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 xl:w-[26rem] xl:h-[26rem] lg:w-[26rem] lg:h-[26rem] md:w-[26rem] md:h-[26rem] sm:w-[20rem] sm:h-[20rem] bg-amber-800 opacity-50 rounded-full"></div>
           <div className="self-center z-10">
-            <h1 className="pb-3 font-bold text-3xl">RENDANG FOR KIDS</h1>
+            <h1 className="pb-3 font-bold text-3xl sm:pb-8">
+              RENDANG FOR KIDS
+            </h1>
             <i className="text-lg">
               ‘Rendang yang diolah secara khusus untuk anak anak, tidak pedas,
               tekstur gampang dikunyah anak dan berbahan baku berkualitas.
@@ -120,14 +122,14 @@ const Home = () => {
           </div>
           <div className="relative z-10">
             <img
-              className="w-[32rem]"
+              className="w-[32rem] pt-10"
               src={require("../assets/homepict1.png")}
             />
           </div>
         </div>
 
-        <div className="container z-10 relative mx-auto px-32 -top-12 grid grid-cols-2 lg:px-10 lg:gap-8">
-          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[26rem] h-[26rem] bg-amber-800 opacity-50 rounded-full"></div>
+        <div className="container z-10 relative mx-auto grid px-10 pb-20 xl:grid-cols-2 xl:pb-0 lg:grid-cols-2 md:grid-cols-2 xl:px-32 -top-12 lg:px-10 lg:gap-8 md:px-8 md:gap-5 sm:pb-24 sm:grid-cols-1 sm:gap-y-8  sm:px-8">
+          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 xl:w-[26rem] xl:h-[26rem] lg:w-[26rem] lg:h-[26rem] md:w-[26rem] md:h-[26rem] sm:w-[20rem] sm:h-[20rem] bg-amber-800 opacity-50 rounded-full"></div>
           <div className="self-center z-10">
             <h1 className="pb-3 font-bold text-3xl">RENDANG SATSET</h1>
             <i className="text-lg">
@@ -144,8 +146,8 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="container z-10 relative mx-auto px-32 grid grid-cols-2 lg:px-10 lg:gap-8">
-          <div className="absolute z-10 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[26rem] h-[26rem] bg-amber-800 opacity-50 rounded-full"></div>
+        <div className="container z-10 relative mx-auto grid px-10 xl:grid-cols-2 xl:pb-0 lg:grid-cols-2 md:grid-cols-2 xl:px-32 -top-12 lg:px-10 lg:gap-8 md:px-8 md:gap-5 sm:pb-24 sm:grid-cols-1 sm:gap-y-8 sm:px-8">
+          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 xl:w-[26rem] xl:h-[26rem] lg:w-[26rem] lg:h-[26rem] md:w-[26rem] md:h-[26rem] sm:w-[20rem] sm:h-[20rem] bg-amber-800 opacity-50 rounded-full"></div>
           <div className="self-center z-10">
             <h1 className="pb-3 font-bold text-3xl">RENDANG CRACKERs</h1>
             <i className="text-lg">
@@ -153,23 +155,23 @@ const Home = () => {
               crackers’
             </i>
           </div>
-          <div className="relative z-10 ">
+          <div className="relative z-10 justify-self-center xl:justify-self-start lg:justify-self-start md:justify-self-start">
             <img
-              className="h-[40rem] z-10"
+              className="xl:h-[40rem] lg:h-[35rem] md:h-[30rem] sm:h-[40rem] h-[25rem] z-10"
               src={require("../assets/homepict3.png")}
             />
           </div>
         </div>
         <div
           aria-hidden="true"
-          className="absolute inset-x-0 top-[calc(100%-13rem)] z-0 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem) xl:top-[calc(100%-55rem)] lg:top-[calc(100%-50rem)]"
+          className="absolute inset-x-0 top-[calc(100%-33rem)] z-0 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem) xl:top-[calc(100%-55rem)] lg:top-[calc(100%-50rem)] md:top-[calc(100%-50rem)] sm:top-[calc(100%-50rem)]"
         >
           <div
             style={{
               clipPath:
                 "polygon(11% 100%, 11% 56%, 6% 48%, 2% 44%, 0% 46%, 0% 89%)",
             }}
-            className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff0400] to-[#ff9300] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem] xl:left-[calc(50%+1rem)] lg:left-[calc(50%+1rem)]"
+            className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff0400] to-[#ff9300] opacity-30 sm:left-[calc(50%+15rem)] sm:w-[72.1875rem] xl:left-[calc(50%+1rem)] lg:left-[calc(50%+1rem)] md:left-[calc(50%+6rem)]"
           />
         </div>
       </div>
