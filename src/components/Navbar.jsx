@@ -36,7 +36,7 @@ const Navbar = () => {
     <header className="z-20 sticky top-0 bg-[#E8B86D] opacity-100 shadow-sm text-[#200000]">
       <nav
         aria-label="Global"
-        className="mx-auto flex max-w-[90rem] items-center justify-between p-6 lg:px-4"
+        className="mx-auto flex max-w-[90rem] items-center justify-between p-6 lg:px-12"
       >
         <div className="flex">
           <a href="#" className="-m-1.5 p-1.5">
@@ -107,16 +107,16 @@ const Navbar = () => {
       <Dialog
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
-        className="lg:hidden"
+        className="lg:hidden xl:hidden"
       >
-        <div className="fixed inset-0 z-10" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-30 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div className="fixed inset-0 z-20 backdrop-blur-md" />
+        <DialogPanel className="fixed inset-y-0 right-0 z-30 w-full overflow-y-auto bg-[#E8B86D] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <img
                 alt="logo"
-                src={require("../assets/logo.png")}
+                src={require("../assets/logo2.png")}
                 className="h-12 w-auto"
               />
             </a>
@@ -136,43 +136,43 @@ const Navbar = () => {
               <div className="space-y-2 py-6">
                 <a
                   href="/"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-[#ffeedc]/50"
                 >
                   Beranda
                 </a>
                 <a
                   href="/aboutus"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-[#ffeedc]/50"
                 >
                   Tentang Kami
                 </a>
                 <a
                   href="/catalogue"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-[#ffeedc]/50"
                 >
                   Katalog Produk
                 </a>
                 <a
                   href="/expo"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-[#ffeedc]/50"
                 >
                   Expo
                 </a>
                 <a
                   href="/awards"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-[#ffeedc]/50"
                 >
                   Penghargaan
                 </a>
                 <a
                   href="partner"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-[#ffeedc]/50"
                 >
                   Kemitraan
                 </a>
                 <a
                   href="contactus"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-[#ffeedc]/50"
                 >
                   Kontak Kami
                 </a>
