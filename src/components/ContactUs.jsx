@@ -1,10 +1,22 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import {
+  faLocationDot,
+  faMessage,
+  faComment,
+} from "@fortawesome/free-solid-svg-icons";
 import emailjs from "@emailjs/browser";
 
 const ContactUs = () => {
   const form = useRef();
+
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [isConfirming, setConfirming] = useState(false);
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    setModalOpen(true); // Open modal when form is submitted
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -17,6 +29,7 @@ const ContactUs = () => {
       .then(
         () => {
           console.log("SUCCESS!");
+          setModalOpen(false);
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -25,9 +38,9 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="mt-14 mx-auto px-52">
+    <div className="mt-14 mx-auto pb-16 px-12 xl:px-40 lg:px-20 md:px-32 sm:px-16 xl:pb-20 lg:pb-20 md:pb-14 sm:pb-16">
       <h1 className="text-5xl font-extrabold pb-12">Kontak Kami</h1>
-      <div className="grid grid-cols-2">
+      <div className="grid gap-y-16 md:gap-y-28 sm:gap-y-28 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 ">
         <div className="pl-10 border-l-8 border-[#E8B86D]">
           <div>
             <h2 className="pb-3  font-semibold">Rumah Produksi :</h2>
@@ -83,27 +96,38 @@ const ContactUs = () => {
             <h2 className="font-semibold">More Information</h2>
             <div className="grid grid-cols-2">
               <div>
-                <p>WhatsApp</p>
+                <p>
+                  <FontAwesomeIcon className="pr-3" icon={faComment} />
+                  WhatsApp
+                </p>
                 <p>081275740024</p>
               </div>
-              <div>
-                <p>Email</p>
+              <div className="break-words">
+                <p>
+                  <FontAwesomeIcon className="pr-3" icon={faMessage} />
+                  Email
+                </p>
                 <p>rendangnaktaraso@gmail.com</p>
               </div>
             </div>
           </div>
         </div>
-        <div className="self-center px-10">
-          <div className="bg-[#E8B86D] py-10 rounded-xl">
+        <div className="self-center px-2 sm:px-10 lg:px-10 xl:px-8 md:px-10">
+          <div className="bg-[#E8B86D] py-10 rounded-xl xl:px-10 px-7 sm:px-10 lg:px-10 md:px-14 relative z-10">
             <h1 className="text-center pb-8">Formulir Kontak</h1>
 
-            <form ref={form} onSubmit={sendEmail} class="max-w-md mx-auto">
+            <form
+              ref={form}
+              onSubmit={handleFormSubmit}
+              class="xl:max-w-md lg:max-w-md md:max-w-lg sm:max-w-md mx-auto"
+            >
               <div class="relative z-0 w-full mb-5 group">
                 <input
+                  autocomplete="off"
                   type="text"
                   name="fname"
                   id="fname"
-                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-black peer"
+                  class="block pt-3 pb-2 lg:pt-3 lg:pb-2 xl:pt-3 xl:pb-3 md:pt-3 md:pb-2 sm:pt-3 sm:pb-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-black peer"
                   placeholder=" "
                   required
                 />
@@ -116,10 +140,11 @@ const ContactUs = () => {
               </div>
               <div class="relative z-0 w-full mb-5 group">
                 <input
+                  autocomplete="off"
                   type="email"
                   name="email"
                   id="email"
-                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-black peer"
+                  class="block pt-3 pb-2 lg:pt-3 lg:pb-2 xl:pt-3 xl:pb-3 md:pt-3 md:pb-2 sm:pt-3 sm:pb-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-black peer"
                   placeholder=" "
                   required
                 />
@@ -133,11 +158,12 @@ const ContactUs = () => {
               <div class="grid md:grid-cols-2 md:gap-6">
                 <div class="relative z-0 w-full mb-5 group">
                   <input
+                    autocomplete="off"
                     type="tel"
                     pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                     name="phone"
                     id="phone"
-                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-black peer"
+                    class="block pt-3 pb-2 lg:pt-3 lg:pb-2 xl:pt-3 xl:pb-3 md:pt-3 md:pb-2 sm:pt-3 sm:pb-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-black peer"
                     placeholder=" "
                     required
                   />
@@ -145,15 +171,16 @@ const ContactUs = () => {
                     for="phone"
                     class="peer-focus:font-medium absolute text-sm text-black dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-black peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
-                    Phone number (123-456-7890)
+                    No. Telepon
                   </label>
                 </div>
                 <div class="relative z-0 w-full mb-5 group">
                   <input
+                    autocomplete="off"
                     type="text"
                     name="company"
                     id="company"
-                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-black peer"
+                    class="block pt-3 pb-2 lg:pt-3 lg:pb-2 xl:pt-3 xl:pb-3 md:pt-3 md:pb-2 sm:pt-3 sm:pb-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-black peer"
                     placeholder=" "
                     required
                   />
@@ -161,16 +188,17 @@ const ContactUs = () => {
                     for="company"
                     class="peer-focus:font-medium absolute text-sm text-black dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-black peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
-                    Company (Ex. Google)
+                    Perusahaan
                   </label>
                 </div>
               </div>
               <div class="relative z-0 w-full mb-5 group">
                 <textarea
+                  autocomplete="off"
                   rows={5}
                   name="message"
                   id="message"
-                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-black peer"
+                  class="block pt-3 pb-2 lg:pt-3 lg:pb-2 xl:pt-3 xl:pb-3 md:pt-3 md:pb-2 sm:pt-3 sm:pb-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-black peer"
                   placeholder=" "
                   required
                 />
@@ -183,6 +211,8 @@ const ContactUs = () => {
               </div>
 
               <button
+                data-modal-target="popup-modal"
+                data-modal-toggle="popup-modal"
                 type="submit"
                 class="bg-[#ffeedc] hover:bg-[#ffeedc]/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
@@ -192,6 +222,88 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 top-[calc(100%-23rem)] z-0 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem) xl:top-[calc(100%-50rem)] lg:top-[calc(100%-50rem)] md:top-[calc(100%-35rem)] sm:top-[calc(100%-35rem)]"
+      >
+        <div
+          style={{
+            clipPath:
+              "polygon(11% 100%, 11% 56%, 6% 48%, 2% 44%, 0% 46%, 0% 89%)",
+          }}
+          className="relative left-[calc(50%+33rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff0400] to-[#ff9300] opacity-30 sm:left-[calc(50%+56rem)] sm:w-[72.1875rem] xl:left-[calc(50%+80rem)] lg:left-[calc(50%+62rem)] md:left-[calc(50%+62rem)]"
+        />
+      </div>
+      {isModalOpen && (
+        <div
+          id="popup-modal"
+          className="fixed inset-0 z-50 flex justify-center items-center overflow-y-auto bg-black bg-opacity-50"
+        >
+          <div className="relative p-4 w-full max-w-md max-h-full">
+            <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+              <button
+                type="button"
+                className="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                onClick={() => setModalOpen(false)}
+              >
+                <svg
+                  className="w-3 h-3"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 14"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                  />
+                </svg>
+                <span className="sr-only">Close modal</span>
+              </button>
+              <div className="p-4 md:p-5 text-center">
+                <svg
+                  class="mx-auto mb-4 text-gray-400 w-12 h-12 dark:text-gray-200"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  />
+                </svg>
+                <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
+                  Are you sure you want to send the email?
+                </h3>
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    sendEmail(e);
+                    setModalOpen(false);
+                  }}
+                  className="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center"
+                >
+                  Yes, I'm sure
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setModalOpen(false)}
+                  className="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                >
+                  No, cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
