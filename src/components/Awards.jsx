@@ -3,7 +3,9 @@ import React from "react";
 const Awards = () => {
   return (
     <div className="pt-14 px-5 mx-auto bg-[#fff8ee] xl:px-40 lg:px-16 md:px-28 sm:px-14">
-      <h1 className="text-3xl font-semibold pb-12 text-center">Penghargaan</h1>
+      <h1 className="text-3xl font-semibold pb-12 text-center font-headertiga tracking-wider">
+        Penghargaan
+      </h1>
       <div className="grid grid-cols-2 pb-20 xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 gap-8 xl:pb-20 lg:pb-20 md:pb-16 sm:pb-16">
         <div className="flex flex-col text-center items-center justify-center relative group z-10">
           <img

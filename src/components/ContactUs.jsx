@@ -6,6 +6,7 @@ import {
   faComment,
 } from "@fortawesome/free-solid-svg-icons";
 import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 
 const ContactUs = () => {
   const form = useRef();
@@ -21,7 +22,6 @@ const ContactUs = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    console.log("halo");
     emailjs
       .sendForm("service_7f99m1t", "template_6ijswa5", form.current, {
         publicKey: "Y3WsT7DrGPel8vYrn",
@@ -35,11 +35,20 @@ const ContactUs = () => {
           console.log("FAILED...", error.text);
         }
       );
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Pesan Berhasil Dikirim!",
+      showConfirmButton: false,
+      timer: 1500,
+    });
   };
 
   return (
-    <div className="mt-14 mx-auto pb-16 px-12 xl:px-40 lg:px-20 md:px-32 sm:px-16 xl:pb-20 lg:pb-20 md:pb-14 sm:pb-16">
-      <h1 className="text-5xl font-extrabold pb-12">Kontak Kami</h1>
+    <div className="mt-14 mx-auto pb-16 px-8 xl:px-40 lg:px-20 md:px-32 sm:px-16 xl:pb-20 lg:pb-20 md:pb-14 sm:pb-16">
+      <h1 className="text-4xl font-semibold pb-12 font-headertiga tracking-wider">
+        Kontak Kami
+      </h1>
       <div className="grid gap-y-16 md:gap-y-28 sm:gap-y-28 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 ">
         <div className="pl-10 border-l-8 border-[#E8B86D]">
           <div>
@@ -160,7 +169,6 @@ const ContactUs = () => {
                   <input
                     autocomplete="off"
                     type="tel"
-                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                     name="phone"
                     id="phone"
                     class="block pt-3 pb-2 lg:pt-3 lg:pb-2 xl:pt-3 xl:pb-3 md:pt-3 md:pb-2 sm:pt-3 sm:pb-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-black appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-black peer"
@@ -280,7 +288,7 @@ const ContactUs = () => {
                   />
                 </svg>
                 <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
-                  Are you sure you want to send the email?
+                  Yakin mengirim pesan?
                 </h3>
                 <button
                   type="button"
@@ -290,14 +298,14 @@ const ContactUs = () => {
                   }}
                   className="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center"
                 >
-                  Yes, I'm sure
+                  Ya, saya yakin
                 </button>
                 <button
                   type="button"
                   onClick={() => setModalOpen(false)}
                   className="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
                 >
-                  No, cancel
+                  Belum
                 </button>
               </div>
             </div>
