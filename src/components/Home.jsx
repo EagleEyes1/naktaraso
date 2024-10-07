@@ -43,7 +43,7 @@ const Home = () => {
   return (
     <div>
       <div className="bg-[#ffeedc] py-16 px-7 xl:px-5 lg:px-5 md:px-5 sm:px-20">
-        <h1 className="pt-14 text-center font-header text-5xl font-bold tracking-wide">
+        <h1 className="pt-14 text-center font-headertiga text-5xl font-bold tracking-wider">
           RENDANG INOVATIF INDONESIA
         </h1>
         <div className="mt-3 mb-10 text-center font-semibold">

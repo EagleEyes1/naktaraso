@@ -8,6 +8,8 @@ module.exports = {
     extend: {
       fontFamily: {
         header: ['"Josefin Sans"', "Segoe UI", "Roboto", "Oxygen"],
+        headerdua: ['"Protest Strike"', "Segoe UI", "Roboto", "Oxygen"],
+        headertiga: ["Anton", "Segoe UI", "Roboto", "Oxygen"],
       },
     },
   },
