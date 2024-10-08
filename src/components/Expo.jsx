@@ -5,12 +5,12 @@ const Expo = () => {
     <div className="mx-auto px-3 xl:px-52 lg:px-28 md:px-20 sm:px-16 bg-[#fff8ee]">
       <div className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 gap-x-5">
         <img
-          className="h-5/6 w-5/6 self-end justify-self-center xl:justify-self-end lg:justify-self-end md:justify-self-end sm:justify-self-end"
+          className="h-5/6 w-5/6 self-end justify-self-center xl:justify-self-end lg:justify-self-end md:justify-self-end sm:justify-self-end relative z-10"
           src={require("../assets/selangor1.jpeg")}
           alt="selangor1"
         />
         <img
-          className="h-5/6 w-5/6 self-end justify-self-center xl:justify-self-start lg:justify-self-start md:justify-self-start sm:justify-self-start"
+          className="h-5/6 w-5/6 self-end justify-self-center xl:justify-self-start lg:justify-self-start md:justify-self-start sm:justify-self-start relative z-10"
           src={require("../assets/selangor2.jpeg")}
           alt="selangor2"
         />
@@ -22,12 +22,12 @@ const Expo = () => {
       </div>
       <div className="grid grid-cols-2 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 gap-5">
         <img
-          className="h-5/6 w-5/6 self-end justify-self-end"
+          className="h-5/6 w-5/6 self-end justify-self-end relative z-10"
           src={require("../assets/singapore1.jpg")}
           alt="singapore1"
         />
         <img
-          className="h-5/6 w-5/6 self-end"
+          className="h-5/6 w-5/6 self-end relative z-10"
           src={require("../assets/singapore2.jpeg")}
           alt="singapore2"
         />
@@ -41,12 +41,12 @@ const Expo = () => {
           </h1>
         </div>
         <img
-          className="h-5/6 w-5/6 justify-self-end"
+          className="h-5/6 w-5/6 justify-self-end relative z-10"
           src={require("../assets/singapore3.jpeg")}
           alt="singapore3"
         />
         <img
-          className="h-5/6  w-5/6"
+          className="h-5/6  w-5/6 relative z-10"
           src={require("../assets/singapore4.jpeg")}
           alt="singapore4"
         />
@@ -71,42 +71,42 @@ const Expo = () => {
           </h1>
         </div>
         <img
-          className="h-5/6 self-end xl:justify-self-end lg:justify-self-end md:justify-self-end sm:justify-self-end justify-self-center"
+          className="h-5/6 self-end xl:justify-self-end lg:justify-self-end md:justify-self-end sm:justify-self-end justify-self-center relative z-10"
           src={require("../assets/domestik1.jpeg")}
           alt="domestik1"
         />
         <img
-          className="h-5/6 xl:self-end lg:self-end md:self-end sm:self-end self-center justify-self-center xl:justify-self-start lg:justify-self-start md:justify-self-start sm:justify-self-start"
+          className="h-5/6 xl:self-end lg:self-end md:self-end sm:self-end self-center justify-self-center xl:justify-self-start lg:justify-self-start md:justify-self-start sm:justify-self-start relative z-10"
           src={require("../assets/domestik2.jpeg")}
           alt="domestik2"
         />
         <img
-          className="h-5/6 xl:self-end lg:self-end md:self-end sm:self-end self-center justify-self-center xl:justify-self-start lg:justify-self-start md:justify-self-start sm:justify-self-start"
+          className="h-5/6 xl:self-end lg:self-end md:self-end sm:self-end self-center justify-self-center xl:justify-self-start lg:justify-self-start md:justify-self-start sm:justify-self-start relative z-10"
           src={require("../assets/domestik3.jpeg")}
           alt="domestik3"
         />
         <img
-          className="h-5/6 xl:self-end lg:self-end md:self-end sm:self-end self-center justify-self-center xl:justify-self-start lg:justify-self-start md:justify-self-start sm:justify-self-start"
+          className="h-5/6 xl:self-end lg:self-end md:self-end sm:self-end self-center justify-self-center xl:justify-self-start lg:justify-self-start md:justify-self-start sm:justify-self-start relative z-10"
           src={require("../assets/domestik4.jpeg")}
           alt="domestik4"
         />
         <img
-          className="h-5/6 xl:self-end lg:self-end md:self-end sm:self-end self-center justify-self-center xl:justify-self-start lg:justify-self-start md:justify-self-start sm:justify-self-start"
+          className="h-5/6 xl:self-end lg:self-end md:self-end sm:self-end self-center justify-self-center xl:justify-self-start lg:justify-self-start md:justify-self-start sm:justify-self-start relative z-10"
           src={require("../assets/domestik5.jpeg")}
           alt="domestik5"
         />
         <img
-          className="h-5/6 xl:self-end lg:self-end md:self-end sm:self-end self-center justify-self-center xl:justify-self-start lg:justify-self-start md:justify-self-start sm:justify-self-start"
+          className="h-5/6 xl:self-end lg:self-end md:self-end sm:self-end self-center justify-self-center xl:justify-self-start lg:justify-self-start md:justify-self-start sm:justify-self-start relative z-10"
           src={require("../assets/domestik6.jpeg")}
           alt="domestik6"
         />
         <img
-          className="h-5/6 xl:self-end lg:self-end md:self-end sm:self-end self-center justify-self-center xl:justify-self-start lg:justify-self-start md:justify-self-start sm:justify-self-start"
+          className="h-5/6 xl:self-end lg:self-end md:self-end sm:self-end self-center justify-self-center xl:justify-self-start lg:justify-self-start md:justify-self-start sm:justify-self-start relative z-10"
           src={require("../assets/domestik7.jpeg")}
           alt="domestik7"
         />
         <img
-          className="h-5/6 xl:self-end lg:self-end md:self-end sm:self-end self-center justify-self-center xl:justify-self-start lg:justify-self-start md:justify-self-start sm:justify-self-start"
+          className="h-5/6 xl:self-end lg:self-end md:self-end sm:self-end self-center justify-self-center xl:justify-self-start lg:justify-self-start md:justify-self-start sm:justify-self-start relative z-10"
           src={require("../assets/domestik8.jpeg")}
           alt="domestik8"
         />
@@ -119,6 +119,18 @@ const Expo = () => {
             Expo
           </span>
         </h1>
+      </div>
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 top-[calc(100%-33rem)] z-0 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem) xl:top-[calc(100%-55rem)] lg:top-[calc(100%-50rem)] md:top-[calc(100%-50rem)] sm:top-[calc(100%-50rem)]"
+      >
+        <div
+          style={{
+            clipPath:
+              "polygon(11% 100%, 11% 56%, 6% 48%, 2% 44%, 0% 46%, 0% 89%)",
+          }}
+          className="relative left-[calc(50%+7rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff0400] to-[#ff9300] opacity-30 sm:left-[calc(50%+15rem)] sm:w-[72.1875rem] xl:left-[calc(50%+1rem)] lg:left-[calc(50%+1rem)] md:left-[calc(50%+6rem)]"
+        />
       </div>
     </div>
   );

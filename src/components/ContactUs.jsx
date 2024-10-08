@@ -45,7 +45,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="mt-14 mx-auto pb-16 px-8 xl:px-40 lg:px-20 md:px-32 sm:px-16 xl:pb-20 lg:pb-20 md:pb-14 sm:pb-16">
+    <div className="mt-14 mx-auto pb-16 bg-[#fff8ee] px-8 xl:px-40 lg:px-20 md:px-32 sm:px-16 xl:pb-20 lg:pb-20 md:pb-14 sm:pb-16">
       <h1 className="text-4xl font-semibold pb-12 font-headertiga tracking-wider">
         Kontak Kami
       </h1>
