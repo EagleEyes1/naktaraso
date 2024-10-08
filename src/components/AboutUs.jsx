@@ -5,7 +5,7 @@ const AboutUs = () => {
   return (
     <>
       <div className="mx-auto  z-10  py-20 px-7 bg-[#ffeedc] xl:py-20 lg:py-20 md:py-20 sm:py-20 xl:px-44 lg:px-32 md:px-24 sm:px-16">
-        <div className="py-16 xl:px-20 lg:px-20 md:px-20 sm:px-20 px-8 gap-y-14 grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 bg-[#E8B86D] rounded-2xl shadow-lg relative z-10">
+        <div className="py-16 xl:px-20 lg:px-20 md:px-20 sm:px-12 px-8 gap-y-14 grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 bg-[#E8B86D] rounded-2xl shadow-lg relative z-10">
           <div className="self-center">
             <h1 className="text-3xl font-bold pb-8 font-headertiga tracking-wider">
               Tentang Kami
@@ -90,7 +90,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="text-lg leading-8 bg-[#fff8ee] px-7 xl:px-48 lg:px-32 md:px-20 sm:px-16 pt-5 pb-32 relative z-0">
+      <div className="text-lg leading-8 bg-[#fff8ee] px-7 xl:px-48 lg:px-32 md:px-20 sm:px-16 pt-5 pb-20 relative z-0">
         <div className="pt-7 grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-x-10 gap-y-10">
           <div className="bg-[#E8B86D] p-10 rounded-xl shadow-lg">
             <div className="flex flex-col">
@@ -144,6 +144,48 @@ const AboutUs = () => {
                   </li>
                 </ul>
               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="sertif"
+        className="bg-[#fff8ee] xl:px-44 lg:px-28 md:px-16 sm:px-14 xl:pb-28 lg:pb-24 md:pb-28 sm:pb-20 px-5 pb-8"
+      >
+        <div className="pb-8">
+          <div className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-x-8 gap-y-8">
+            <div className="bg-gray-200 rounded-md shadow-lg">
+              <img
+                src={require("../assets/legalitas1.png")}
+                alt="Image 1"
+                className="w-full h-auto rounded-md"
+              />
+            </div>
+            <div className="bg-gray-200 rounded-md shadow-lg">
+              <img
+                src={require("../assets/legalitas2.png")}
+                alt="Image 1"
+                className="w-full h-auto rounded-md"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-x-8 gap-y-8">
+            <div className="bg-gray-200 rounded-md shadow-lg">
+              <img
+                src={require("../assets/sertif1.png")}
+                alt="Image 1"
+                className="w-full h-auto rounded-md"
+              />
+            </div>
+            <div className="bg-gray-200 rounded-md shadow-lg">
+              <img
+                src={require("../assets/sertif2.png")}
+                alt="Image 1"
+                className="w-full h-auto rounded-md"
+              />
             </div>
           </div>
         </div>

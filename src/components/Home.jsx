@@ -85,7 +85,7 @@ const Home = () => {
               className="rounded-2xl"
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/Q7KcoNmWyC0?si=A2VJ3QXKGDA_ucfl"
+              src="https://www.youtube.com/embed/mvQq505chtI?si=WVWlFqvAnpM5QL9t"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -149,10 +149,27 @@ const Home = () => {
         <div className="container z-10 relative mx-auto grid px-10 xl:grid-cols-2 xl:pb-0 lg:grid-cols-2 md:grid-cols-2 xl:px-32 -top-12 lg:px-10 lg:gap-8 md:px-8 md:gap-5 sm:pb-24 sm:grid-cols-1 sm:gap-y-8 sm:px-8">
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 xl:w-[26rem] xl:h-[26rem] lg:w-[26rem] lg:h-[26rem] md:w-[26rem] md:h-[26rem] sm:w-[20rem] sm:h-[20rem] bg-amber-800 opacity-50 rounded-full"></div>
           <div className="self-center z-10">
-            <h1 className="pb-3 font-bold text-3xl">RENDANG CRACKERs</h1>
+            <h1 className="pb-3 font-bold text-3xl">RENDANG CRACKERS</h1>
             <i className="text-lg">
               ‘Sensasi nikmatnya rendang yang dinikmati dalam renyahnya
               crackers’
+            </i>
+          </div>
+          <div className="relative z-10 justify-self-center xl:justify-self-start lg:justify-self-start md:justify-self-start">
+            <img
+              className="xl:h-[45rem] lg:h-[40rem] md:h-[35rem] sm:h-[40rem] h-[30rem] z-10"
+              src={require("../assets/homepict4.png")}
+            />
+          </div>
+        </div>
+
+        <div className="container z-10 relative mx-auto grid px-10 xl:grid-cols-2 xl:pb-0 lg:grid-cols-2 md:grid-cols-2 xl:px-32 -top-12 lg:px-10 lg:gap-8 md:px-8 md:gap-5 sm:pb-24 sm:grid-cols-1 sm:gap-y-8 sm:px-8">
+          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 xl:w-[26rem] xl:h-[26rem] lg:w-[26rem] lg:h-[26rem] md:w-[26rem] md:h-[26rem] sm:w-[20rem] sm:h-[20rem] bg-amber-800 opacity-50 rounded-full"></div>
+          <div className="self-center z-10">
+            <h1 className="pb-3 font-bold text-3xl">RENDANG TELUR</h1>
+            <i className="text-lg">
+              ‘Rendang yang terbuat dari telur dengan cita rasa khas Minangkabau
+              sebagai pendamping lauk saat makan.’
             </i>
           </div>
           <div className="relative z-10 justify-self-center xl:justify-self-start lg:justify-self-start md:justify-self-start">
@@ -162,6 +179,26 @@ const Home = () => {
             />
           </div>
         </div>
+
+        <div className="container z-10 relative mx-auto grid px-10 xl:grid-cols-2 xl:pb-0 lg:grid-cols-2 md:grid-cols-2 xl:px-32 -top-12 lg:px-10 lg:gap-8 md:px-8 md:gap-5 sm:pb-24 sm:grid-cols-1 sm:gap-y-8 sm:px-8">
+          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 xl:w-[26rem] xl:h-[26rem] lg:w-[26rem] lg:h-[26rem] md:w-[26rem] md:h-[26rem] sm:w-[20rem] sm:h-[20rem] bg-amber-800 opacity-50 rounded-full"></div>
+          <div className="self-center z-10">
+            <h1 className="pb-3 font-bold text-3xl">PASTA RENDANG</h1>
+            <i className="text-lg">
+              ‘Bumbu rendang siap makan yang sangat praktis. Dapat dikonsumsi
+              langsung dengan kreasi paduan masakan Ibu dirumah. Dapat dilumuri
+              dengan telur rebus, penambah rasa pada roti, mie instan, sandwich
+              dan nasi putih.’
+            </i>
+          </div>
+          <div className="relative z-10 justify-self-center xl:justify-self-start lg:justify-self-start md:justify-self-start">
+            <img
+              className="xl:h-[32rem] lg:h-[30rem] md:h-[25rem] sm:h-[30rem] h-[20rem] z-10"
+              src={require("../assets/homepict5.png")}
+            />
+          </div>
+        </div>
+
         <div
           aria-hidden="true"
           className="absolute inset-x-0 top-[calc(100%-33rem)] z-0 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem) xl:top-[calc(100%-55rem)] lg:top-[calc(100%-50rem)] md:top-[calc(100%-50rem)] sm:top-[calc(100%-50rem)]"

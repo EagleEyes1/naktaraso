@@ -4,7 +4,9 @@ import belutImage from "../assets/belut.jpeg";
 import tunaImage from "../assets/tuna.jpeg";
 import leleImage from "../assets/lele.jpeg";
 import satsetImage from "../assets/satset.png";
-import crackerImage from "../assets/telur.jpg";
+import telurImage from "../assets/telur.jpg";
+import crackerImage from "../assets/crackers.png";
+import pastaImage from "../assets/pasta.png";
 
 const products = [
   {
@@ -49,11 +51,27 @@ const products = [
   },
   {
     id: 6,
-    name: "RENDANG CRACKERS",
+    name: "RENDANG TELUR",
     href: "https://s.shopee.co.id/609CJ7KVyU?share_channel_code=1",
     price: "RP. 25000",
+    imageSrc: telurImage,
+    imageAlt: "Rendang Telur",
+  },
+  {
+    id: 7,
+    name: "RENDANG CRACKERS",
+    href: "https://s.shopee.co.id/609CJ7KVyU?share_channel_code=1",
+    price: "RP. 15000",
     imageSrc: crackerImage,
     imageAlt: "Rendang Crackers",
+  },
+  {
+    id: 8,
+    name: "PASTA RENDANG",
+    href: "https://s.shopee.co.id/609CJ7KVyU?share_channel_code=1",
+    price: "RP. 35000",
+    imageSrc: pastaImage,
+    imageAlt: "Pasta Rendang",
   },
 ];
 

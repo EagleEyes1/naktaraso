@@ -90,17 +90,19 @@ const ContactUs = () => {
                 target="_blank"
               >
                 <img
-                  className="w-20"
+                  className="w-20 relative z-10"
                   src={require("../assets/shopee.png")}
                   alt=""
                 />
               </a>
 
-              <img
-                className="w-20"
-                src={require("../assets/tokopedia.png")}
-                alt=""
-              />
+              <a href="https://www.tokopedia.com/nak-taraso" target="_blank">
+                <img
+                  className="w-20 relative z-10"
+                  src={require("../assets/tokopedia.png")}
+                  alt=""
+                />
+              </a>
             </div>
             <h2 className="font-semibold">More Information</h2>
             <div className="grid grid-cols-2">
@@ -123,7 +125,7 @@ const ContactUs = () => {
         </div>
         <div className="self-center px-2 sm:px-10 lg:px-10 xl:px-8 md:px-10">
           <div className="bg-[#E8B86D] py-10 rounded-xl xl:px-10 px-7 sm:px-10 lg:px-10 md:px-14 relative z-10">
-            <h1 className="text-center pb-8">Formulir Kontak</h1>
+            <h1 className="text-center font-semibold pb-8">Formulir Kontak</h1>
 
             <form
               ref={form}
